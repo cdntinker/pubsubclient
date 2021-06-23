@@ -6,7 +6,11 @@ PubSubClient.cpp: In member function 'boolean PubSubClient::publish_P(const char
 .pio/libdeps/Sinilink_3t/PubSubClient/src/PubSubClient.cpp:523:16: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
   523 |     return (rc == expectedLength);
   ```
-  
+FIX: Add unsigned to the definition of expectedLength on line 487 of PubSubClient.cpp
+
+```
+unsigned int expectedLength;
+```
 # Arduino Client for MQTT
 
 This library provides a client for doing simple publish/subscribe messaging with
