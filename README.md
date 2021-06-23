@@ -1,3 +1,12 @@
+This is a fork of Nick O'Learys excellent work.
+Mostly just to get rid of an annoying compiler warning:
+
+```
+PubSubClient.cpp: In member function 'boolean PubSubClient::publish_P(const char*, const uint8_t*, unsigned int, boolean)':
+.pio/libdeps/Sinilink_3t/PubSubClient/src/PubSubClient.cpp:523:16: warning: comparison of integer expressions of different signedness: 'unsigned int' and 'int' [-Wsign-compare]
+  523 |     return (rc == expectedLength);
+  ```
+  
 # Arduino Client for MQTT
 
 This library provides a client for doing simple publish/subscribe messaging with
